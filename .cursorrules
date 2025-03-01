@@ -1,0 +1,56 @@
+# Instructions
+
+During your interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
+
+
+# Tools
+
+## Model Downloader
+
+### Prerequisites:
+
+- Need HF_ACCESS_TOKEN and CIVITAI_API_KEY environment variables set.
+
+To download models, you need to source the file (load it into your current shell) before you can use the functions.
+```
+source tools/downloader.sh
+```
+
+### Download a model from civitai:
+```
+download_from_civitai url output_path
+```
+
+Example: Download juggernaut model
+```
+download_from_civitai \
+    "https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" \
+    "./models/checkpoints/Jugg_X_RunDiffusion_Hyper.safetensors"
+```
+
+### Download a model from huggingface:
+```
+download_from_huggingface repo_id filename output_name output_dir
+```
+
+Example: Download sdxl 1.0 controlnet from 
+https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true
+```
+download_from_huggingface \
+        "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro" \
+        "diffusion_pytorch_model.safetensors" \
+        "flux_diffusion_pytorch_model.safetensors" \
+        "./models/controlnet" # output directory
+```
+
+# Lessons
+
+## Read and modify user created workflows 
+
+user workflows are represented as json files under user/default/workflows
+
+
+## User Specified Lessons
+
+- Include info useful for debugging in the program output.
+- Read the file before you try to edit it.

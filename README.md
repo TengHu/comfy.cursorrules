@@ -1,1 +1,1 @@
-# comfy.cursorrules
+# Enhance ComfyUI development with Cursor
