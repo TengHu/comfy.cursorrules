@@ -5,6 +5,15 @@ During your interaction with the user, if you find anything reusable in this pro
 
 # Tools
 
+## Learn about workflows on the user canvas
+user workflows are represented as json files under `user/default/workflows`
+
+## Take a look at some workflow templates and examples
+When ask about workflows, take a look at `tools/workflow_templates` for inspirations
+
+## Get information about installed nodes
+Run `python tools/call_object_info.py `
+
 ## Model Downloader
 
 ### Prerequisites:
@@ -33,6 +42,7 @@ download_from_civitai \
 download_from_huggingface repo_id filename output_name output_dir
 ```
 
+
 Example: Download sdxl 1.0 controlnet from 
 https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true
 ```
@@ -44,11 +54,6 @@ download_from_huggingface \
 ```
 
 # Lessons
-
-## Read and modify user created workflows 
-
-user workflows are represented as json files under user/default/workflows
-
 
 ## User Specified Lessons
 

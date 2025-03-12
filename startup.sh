@@ -1,2 +1,2 @@
-cp .cursorrules ./.cursorrules
-cp -r tools ./tools
+cp custom_nodes/comfy.cursorrules/.cursorrules ./.cursorrules
+cp -r custom_nodes/comfy.cursorrules/tools ./tools
