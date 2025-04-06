@@ -15,6 +15,9 @@ SCRIPT_DIR="$(dirname "$0")"  # Get the directory where the script is located
 ITEMS_TO_COPY=(
     ".cursorrules"
     "tools"
+    ".cursorignore"
+    ".cursorindexingignore"
+    ".env.example"
     # Add more files/directories here
     # Example:
     # "some_other_directory"
@@ -31,7 +34,7 @@ fi
 for item in "${ITEMS_TO_COPY[@]}"; do
     if [ -e "$SCRIPT_DIR/$item" ]; then
         echo "Copying $item..."
-        cp -r "$SCRIPT_DIR/$item" "$DEST_PATH/"
+        cp -rf "$SCRIPT_DIR/$item" "$DEST_PATH/"
     else
         echo "Warning: $item not found in script directory"
     fi
